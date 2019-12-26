@@ -9,7 +9,9 @@ public class Curso {
 
     public Curso(String cod, String nom, int cre)
     {
-
+        this.codigoDelCurso = cod;
+        this.nombreCurso = nom;
+        this.creditos = cre;
     }
 
     public int getCreditos() {
@@ -33,7 +35,7 @@ public class Curso {
     }
     public String getDescripcion()
     {
-       return "";
+       return String.format("Nombre: {0} Código: {1} Créditos: {2}", nombreCurso, codigoDelCurso, creditos);
     }
 
     public String getCodigoDelCurso() {
@@ -43,8 +45,15 @@ public class Curso {
 
     public boolean EstaCalificado()
     {
+        if (nota == 0.0)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
 
-        return true;
     }
 
 }

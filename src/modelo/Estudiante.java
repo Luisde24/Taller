@@ -1,7 +1,6 @@
 package modelo;
 import com.sun.xml.internal.ws.policy.EffectiveAlternativeSelector;
 
-import java.util.Scanner;
 public class Estudiante  {
 
     //atributos encapsulado
