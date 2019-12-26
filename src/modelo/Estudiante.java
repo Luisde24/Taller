@@ -84,8 +84,15 @@ public class Estudiante  {
     }
     public boolean pensumIncluyeCurso(String codigoCurso)
     {
+        if (BuscarCurso(codigoCurso) != null)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
 
-      return true;
     }
     public boolean EstudianteEstaPrueba()
     {
