@@ -78,9 +78,30 @@ public class Estudiante  {
 
     public double CalcularPromedio()//me calcula el promedio de la materia
     {
+        double promedioMaterias = 0.0;
+        int totalCreditos = 0;
 
+        for (int i = 0; i < cursos.length; ++i)
+        {
+            if (cursos[i] != null)
+            {
+                if (cursos[i].getNota() != 0.0)
+                {
+                    totalCreditos = totalCreditos + cursos[i].getCreditos();
+                    promedioMaterias = promedioMaterias + cursos[i].getNota() * cursos[i].getCreditos();
+                }
+            }
+        }
 
-      return 0.0;
+        if (totalCreditos != 0)
+        {
+            return (promedioMaterias / totalCreditos);
+        }
+        else
+        {
+            return promedioMaterias;
+        }
+        
     }
     public boolean pensumIncluyeCurso(String codigoCurso)
     {
