@@ -101,7 +101,7 @@ public class Estudiante  {
         {
             return promedioMaterias;
         }
-        
+
     }
     public boolean pensumIncluyeCurso(String codigoCurso)
     {
@@ -118,7 +118,15 @@ public class Estudiante  {
     public boolean EstudianteEstaPrueba()
     {
 
-        return true;
+        if (CalcularPromedio() < 3.5)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+
     }
 
     public boolean tieneCursosCompletos(String codigoCurso)
