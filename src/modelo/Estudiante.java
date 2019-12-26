@@ -79,6 +79,7 @@ public class Estudiante  {
     public double CalcularPromedio()//me calcula el promedio de la materia
     {
 
+
       return 0.0;
     }
     public boolean pensumIncluyeCurso(String codigoCurso)
@@ -99,7 +100,17 @@ public class Estudiante  {
 
     public Curso BuscarCurso(String codigoCurso)
     {
-    return null;
+
+        for (int i = 0; i < cursos.length; ++i)
+        {
+            if (cursos[i] != null && cursos[i].getCodigoDelCurso().equals(codigoCurso))
+            {
+                System.out.println("El curso ha sido tomado");
+                return cursos[i];
+            }
+        }
+        return null;
+
     }
 
 
