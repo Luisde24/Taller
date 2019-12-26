@@ -61,7 +61,19 @@ public class Estudiante  {
 
     public boolean asignarCurso(Curso curso)
     {
-        return true;
+
+
+        for(int i=0; i< cursos.length; i++){
+
+            if(cursos[i] == null){
+
+                cursos[i] = curso;
+
+                return true;
+            }
+
+        }
+        return false;
     }
 
     public double CalcularPromedio()//me calcula el promedio de la materia
